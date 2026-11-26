@@ -1,0 +1,112 @@
+{
+ "doctype": "DocType",
+ "name": "Marketing Channel",
+ "module": "Marketing",
+ "engine": "InnoDB",
+ "creation": "2026-11-26 12:00:00.000000",
+ "modified": "2026-11-26 12:00:00.000000",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "field_order": [
+  "channel_name",
+  "channel_type",
+  "is_online",
+  "column_break_utm",
+  "utm_source",
+  "utm_medium",
+  "connector",
+  "disabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "channel_name",
+   "fieldtype": "Data",
+   "label": "Channel Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "channel_type",
+   "fieldtype": "Select",
+   "label": "Channel Type",
+   "options": "Social\nSearch\nDisplay\nConversational AI\nVideo\nOffline\nOther",
+   "default": "Social",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "is_online",
+   "fieldtype": "Check",
+   "label": "Online",
+   "default": "1"
+  },
+  {
+   "fieldname": "column_break_utm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "utm_source",
+   "fieldtype": "Link",
+   "label": "UTM Source",
+   "options": "UTM Source",
+   "description": "Default utm_source of tracking links for this channel"
+  },
+  {
+   "fieldname": "utm_medium",
+   "fieldtype": "Link",
+   "label": "UTM Medium",
+   "options": "UTM Medium"
+  },
+  {
+   "fieldname": "connector",
+   "fieldtype": "Data",
+   "label": "Connector",
+   "read_only": 1,
+   "description": "Set when a connector app registers this channel (lifegence_marketing_connectors). Empty: CSV or manual entry"
+  },
+  {
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Marketing Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Marketing User",
+   "read": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "autoname": "field:channel_name",
+ "description": "An advertising channel (media): social, search, display, conversational AI (ChatGPT), offline and others."
+}

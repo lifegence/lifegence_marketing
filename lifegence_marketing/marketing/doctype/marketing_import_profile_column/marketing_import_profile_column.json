@@ -1,0 +1,40 @@
+{
+ "doctype": "DocType",
+ "name": "Marketing Import Profile Column",
+ "module": "Marketing",
+ "engine": "InnoDB",
+ "creation": "2026-11-26 12:00:00.000000",
+ "modified": "2026-11-26 12:00:00.000000",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "field_order": [
+  "target",
+  "source_column"
+ ],
+ "fields": [
+  {
+   "fieldname": "target",
+   "fieldtype": "Select",
+   "label": "Field",
+   "options": "date\ncampaign_id\ncampaign_name\nad_group_id\nad_group_name\nad_id\nad_name\nplacement\nimpressions\nreach\nclicks\ncost\nconversions\nconversion_value\ncurrency",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 3
+  },
+  {
+   "fieldname": "source_column",
+   "fieldtype": "Data",
+   "label": "Column in the File",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 5
+  }
+ ],
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "istable": 1,
+ "editable_grid": 1
+}

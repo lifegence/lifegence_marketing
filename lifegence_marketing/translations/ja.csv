@@ -1,0 +1,203 @@
+Lifegence Marketing,Lifegence Marketing
+Marketing,マーケティング
+Marketing Settings,マーケティングの設定
+Marketing Channel,媒体
+Marketing Ad Account,広告アカウント
+Marketing Campaign,キャンペーン
+Marketing Campaign Budget,キャンペーンの予算
+Marketing Creative,クリエイティブ
+Marketing Tracking Link,計測リンク
+Marketing User,マーケティング担当
+Campaigns,キャンペーン
+Channels and Accounts,媒体とアカウント
+Settings,設定,Workspace
+Attribution,流入元の記録
+Attribution Days,流入元を覚えておく日数
+Default Attribution,既定の成果の数え方
+Last Touch,最後の接点
+First Touch,最初の接点
+Click ID Parameters,クリック ID のパラメーター
+Record Only With Consent,同意がある来訪者だけ記録する
+Consent Cookie Name,同意の Cookie の名前
+Ad Performance Import,広告の実績の取り込み
+Days Fetched Again,毎回取り直す日数
+Days Fetched on First Import,初回にさかのぼる日数
+Campaign Prefix Separator,媒体側の名前の区切り
+Approval,承認
+Require a Ringi to Activate,実施に稟議を必須にする
+Channel Name,媒体名
+Channel Type,種類
+Social,SNS
+Search,検索
+Display,ディスプレイ
+Conversational AI,対話 AI
+Video,動画
+Offline,オフライン
+Online,オンライン
+Connector,コネクタ
+Account Name,アカウント名
+Channel,媒体
+Account ID,アカウント ID
+Agency,代理店
+Time Zone,時間帯
+Automatic Import,自動の取り込み
+Import Automatically,自動で取り込む
+Connected App,OAuth の接続
+API Key,API キー
+Import Status,取り込みの状態
+Auth Expired,認証切れ
+Last Imported,最後に取り込んだ日時
+Month,月
+Campaign Name,キャンペーン名
+Campaign Code,キャンペーンコード
+Objective,目的
+Leads,リード獲得
+Sales,販売
+Awareness,認知
+Event,イベント
+Recruiting,採用
+Planned,計画
+Pending Approval,承認待ち,Marketing Campaign
+Active,実施中,Marketing Campaign
+Paused,一時停止
+Completed,終了,Marketing Campaign
+Campaign Owner,担当
+Targets,目標
+Target Leads,目標のリード数
+Target Cost per Lead,目標の獲得単価（CPA）
+Target ROAS,目標の ROAS
+Total Budget,予算の合計
+Budget,予算
+Budget by Channel and Month,媒体×月の予算
+Title,タイトル,Marketing Creative
+Shows It Is an Advertisement,広告であることを表示している（PR 表記）
+Landing Page,遷移先
+Copy,原稿
+Headline,見出し
+Body,本文
+Destination URL,遷移先の URL
+Clicks,クリック数
+Tracking URL,計測用 URL
+Short URL,短縮 URL
+QR Code,QR コード
+Links,リンク
+The campaign code may contain only lowercase letters, digits and hyphens (2 to 63 characters),キャンペーンコードには英小文字・数字・ハイフンだけが使えます（2〜63 文字）
+To Date must not be before From Date,終了日は開始日より前にできません
+Row {0}: {1} in {2} is listed more than once,{0} 行目：{2} の {1} が重複しています
+Row {0}: the budget cannot be negative,{0} 行目：予算はマイナスにできません
+A decided ringi that references this campaign is needed to make it Active,実施中にするには、このキャンペーンを関連文書にした決裁済みの稟議が必要です
+Approval needed,承認が必要です
+The destination must be an http or https URL,遷移先は http または https の URL にしてください
+Marketing Attribution,流入元の記録
+Marketing Lead Form Map,リード広告のフォームの対応
+Lead DocType,リードの種類
+Lead,リード,Marketing Attribution
+Recorded On,記録日時
+Lead Form,リード広告のフォーム
+Click IDs,クリック ID
+First Touch Campaign,最初の接点のキャンペーン
+Last Touch Campaign,最後の接点のキャンペーン
+Source,流入元,Marketing Attribution
+Medium,媒体の種類,Marketing Attribution
+Campaign (utm),キャンペーン（utm）
+Content,コンテンツ,Marketing Attribution
+Term,キーワード,Marketing Attribution
+Time,日時,Marketing Attribution
+Form ID,フォーム ID
+Form Name,フォーム名
+Marketing Ad Object,媒体側の広告
+Marketing Performance,広告の実績
+Marketing Import,実績の取り込み
+Marketing Import Profile,取り込みの設定
+Marketing Import Profile Column,取り込みの列
+Ad Performance,広告の実績
+Leads,リード,Workspace
+Type,種類,Marketing Ad Object
+Parent,上位
+Status on the Channel,媒体での状態
+ID on the Channel,媒体での ID
+Matched by Hand,手で対応付けた
+Ad Group,広告グループ
+Ad,広告
+Placement,配信面
+Impressions,表示回数
+Reach,リーチ
+Cost,費用
+Conversions,コンバージョン
+Conversion Value,コンバージョンの金額
+Import,取り込み
+Import Profile,取り込みの設定
+CSV File,CSV ファイル
+Rows Imported,取り込んだ行
+Rows Skipped,飛ばした行
+Messages,メッセージ
+Profile Name,設定名
+Encoding,文字コード
+Date Format,日付の形式
+Rows Before the Header,見出しの前の行数
+Columns,列
+Field,項目,Marketing Import Profile Column
+Column in the File,ファイルの列名
+Import queued,取り込みを開始しました
+This import is already queued,この取り込みはすでに開始しています
+No date column was found. Headers: {0},日付の列が見つかりません。列名：{0}
+"No cost, impression or click column was found. Headers: {0}",費用・表示回数・クリック数の列が見つかりません。列名：{0}
+Not a number: {0},数値ではありません：{0}
+Not a date: {0},日付ではありません：{0}
+Line {0}: {1},{0} 行目：{1}
+Imported {0} rows,{0} 行を取り込みました
+The file is neither UTF-8 nor Shift_JIS,ファイルが UTF-8 でも Shift_JIS でもありません
+{0} {1} already exists for this ad account ({2}),この広告アカウントには {0} {1} がすでにあります（{2}）
+Reports,レポート,Workspace
+Campaign Performance,キャンペーン成果
+Budget vs Actual,予実
+Channel Summary,媒体別の推移
+Ad Spend Reconciliation,広告費の請求照合
+Group By,集計の単位
+Campaign and Channel,キャンペーンと媒体
+CTR %,クリック率 %
+Cost per Lead,獲得単価（CPA）
+Deals,商談
+Deal Rate %,商談化率 %
+Won,受注
+Won Amount,受注額
+Revenue (Won Deals),売上（受注した商談）
+Revenue (Sales Invoices),売上（請求書）
+Revenue,売上
+ROAS,ROAS
+Used %,消化率 %
+Forecast for the Month,月末の見込み
+Forecast vs Budget %,見込み÷予算 %
+Remaining,残り
+Cost Reported by the Channel,媒体の報告の費用
+Invoiced,請求額
+Difference,差
+Not Set,未設定
+This report needs ERPNext (purchase invoices).,このレポートには ERPNext（仕入請求書）が必要です。
+Create Ringi,稟議を起案
+Approved by ringi {0},稟議 {0} で承認済み
+A decided ringi is needed before this campaign becomes Active.,実施中にする前に、決裁済みの稟議が必要です。
+The ringi for {0} was decided. The campaign can be made Active.,{0} の稟議が決裁されました。キャンペーンを実施中にできます。
+Marketing Sync Log,取り込みの記録
+Connected By,接続した利用者
+Lead ID on the Channel,媒体でのリード ID
+Rows,行数
+Started,開始
+Finished,終了
+Running,実行中
+Done,完了,Marketing Sync Log
+Failed,失敗,Marketing Sync Log
+Error,エラー
+Test Connection,接続を確認
+Import Now,今すぐ取り込む
+Import Log,取り込みの記録
+Connected,接続できました
+Not Connected,接続できません
+Empty: the usual period,空欄：いつもの期間
+No connector {0} is installed,コネクタ {0} が入っていません
+Channel {0} has no connector,媒体 {0} にはコネクタがありません
+The ad account has no API key,広告アカウントに API キーがありません
+The ad account is not connected (set a Connected App),広告アカウントが接続されていません（OAuth の接続を設定してください）
+No valid token of {0} for {1}; connect again,{0} の {1} の有効なトークンがありません。接続し直してください
+Ad account {0}: the connection has expired. Connect it again.,広告アカウント {0}：接続の期限が切れました。接続し直してください。
+Ad account {0}: the import failed.,広告アカウント {0}：取り込みに失敗しました。

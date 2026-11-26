@@ -1,0 +1,33 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2026-11-26 12:00:00.000000",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2026-11-26 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Marketing",
+ "name": "Budget vs Actual",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Marketing Campaign",
+ "report_name": "Budget vs Actual",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Marketing Manager"
+  },
+  {
+   "role": "Marketing User"
+  }
+ ],
+ "description": "Budget and ad cost by campaign, channel and month, with the forecast for the current month."
+}

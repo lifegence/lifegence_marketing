@@ -1,0 +1,167 @@
+{
+ "doctype": "DocType",
+ "name": "Marketing Ad Account",
+ "module": "Marketing",
+ "engine": "InnoDB",
+ "creation": "2026-11-26 12:00:00.000000",
+ "modified": "2026-11-26 15:00:00.000000",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "field_order": [
+  "account_name",
+  "channel",
+  "external_id",
+  "agency",
+  "column_break_main",
+  "currency",
+  "time_zone",
+  "disabled",
+  "section_sync",
+  "sync_enabled",
+  "connected_app",
+  "token_user",
+  "api_key",
+  "column_break_sync",
+  "sync_status",
+  "last_synced_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Link",
+   "label": "Channel",
+   "options": "Marketing Channel",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "external_id",
+   "fieldtype": "Data",
+   "label": "Account ID",
+   "reqd": 1,
+   "description": "The account ID on the channel (unique per channel)"
+  },
+  {
+   "fieldname": "agency",
+   "fieldtype": "Data",
+   "label": "Agency"
+  },
+  {
+   "fieldname": "column_break_main",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Data",
+   "label": "Time Zone",
+   "description": "Time zone of the channel's reports (dates of the performance figures)"
+  },
+  {
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "section_sync",
+   "fieldtype": "Section Break",
+   "label": "Automatic Import"
+  },
+  {
+   "fieldname": "sync_enabled",
+   "fieldtype": "Check",
+   "label": "Import Automatically",
+   "description": "Needs a connector for the channel"
+  },
+  {
+   "fieldname": "connected_app",
+   "fieldtype": "Link",
+   "label": "Connected App",
+   "options": "Connected App",
+   "description": "OAuth connection (Meta, Google). The token is kept by Frappe's Token Cache"
+  },
+  {
+   "fieldname": "token_user",
+   "fieldtype": "Link",
+   "label": "Connected By",
+   "options": "User",
+   "depends_on": "connected_app",
+   "description": "Whose connection (OAuth token) is used for the import. Connected App tokens belong to a user"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key",
+   "description": "For channels authenticated by an API key (ChatGPT)"
+  },
+  {
+   "fieldname": "column_break_sync",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sync_status",
+   "fieldtype": "Select",
+   "label": "Import Status",
+   "options": "\nOK\nError\nAuth Expired\nDisabled",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "last_synced_on",
+   "fieldtype": "Datetime",
+   "label": "Last Imported",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Marketing Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Marketing User",
+   "read": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "autoname": "format:{channel}-{external_id}",
+ "description": "An advertising account on a channel, optionally imported automatically by a connector."
+}

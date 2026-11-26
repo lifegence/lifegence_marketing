@@ -1,0 +1,100 @@
+{
+ "doctype": "DocType",
+ "name": "Marketing Import Profile",
+ "module": "Marketing",
+ "engine": "InnoDB",
+ "creation": "2026-11-26 12:00:00.000000",
+ "modified": "2026-11-26 12:00:00.000000",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "field_order": [
+  "profile_name",
+  "channel",
+  "encoding",
+  "date_format",
+  "skip_rows",
+  "columns"
+ ],
+ "fields": [
+  {
+   "fieldname": "profile_name",
+   "fieldtype": "Data",
+   "label": "Profile Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Link",
+   "label": "Channel",
+   "options": "Marketing Channel",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "encoding",
+   "fieldtype": "Select",
+   "label": "Encoding",
+   "options": "Auto\nutf-8\nutf-8-sig\ncp932",
+   "default": "Auto",
+   "description": "Auto tries UTF-8, then Shift_JIS (cp932)"
+  },
+  {
+   "fieldname": "date_format",
+   "fieldtype": "Data",
+   "label": "Date Format",
+   "description": "Python strptime format, for example %Y/%m/%d. Empty: common formats are tried"
+  },
+  {
+   "fieldname": "skip_rows",
+   "fieldtype": "Int",
+   "label": "Rows Before the Header",
+   "description": "Lines before the header (report title, period)"
+  },
+  {
+   "fieldname": "columns",
+   "fieldtype": "Table",
+   "label": "Columns",
+   "options": "Marketing Import Profile Column",
+   "description": "Only for columns that are not recognised automatically (common English and Japanese headers are)"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Marketing Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Marketing User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "autoname": "field:profile_name",
+ "description": "How to read a channel's CSV export: encoding, date format and column names."
+}

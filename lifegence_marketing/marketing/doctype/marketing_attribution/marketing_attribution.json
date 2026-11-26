@@ -1,0 +1,222 @@
+{
+ "doctype": "DocType",
+ "name": "Marketing Attribution",
+ "module": "Marketing",
+ "engine": "InnoDB",
+ "creation": "2026-11-26 12:00:00.000000",
+ "modified": "2026-11-26 15:00:00.000000",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "field_order": [
+  "reference_doctype",
+  "reference_name",
+  "recorded_on",
+  "cb1",
+  "external_lead_id",
+  "lead_form",
+  "click_ids",
+  "section_first",
+  "first_campaign_link",
+  "first_source",
+  "first_medium",
+  "first_campaign",
+  "cb_first",
+  "first_content",
+  "first_term",
+  "first_landing",
+  "first_at",
+  "section_last",
+  "last_campaign_link",
+  "last_source",
+  "last_medium",
+  "last_campaign",
+  "cb_last",
+  "last_content",
+  "last_term",
+  "last_landing",
+  "last_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Lead DocType",
+   "options": "DocType",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Lead",
+   "options": "reference_doctype",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "recorded_on",
+   "fieldtype": "Datetime",
+   "label": "Recorded On"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "external_lead_id",
+   "fieldtype": "Data",
+   "label": "Lead ID on the Channel",
+   "search_index": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "lead_form",
+   "fieldtype": "Data",
+   "label": "Lead Form",
+   "description": "Meta lead form ID (Frappe CRM facebook_form_id)"
+  },
+  {
+   "fieldname": "click_ids",
+   "fieldtype": "Small Text",
+   "label": "Click IDs",
+   "description": "gclid, fbclid and others, as JSON"
+  },
+  {
+   "fieldname": "section_first",
+   "fieldtype": "Section Break",
+   "label": "First Touch"
+  },
+  {
+   "fieldname": "first_campaign_link",
+   "fieldtype": "Link",
+   "label": "First Touch Campaign",
+   "options": "Marketing Campaign",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "first_source",
+   "fieldtype": "Data",
+   "label": "Source"
+  },
+  {
+   "fieldname": "first_medium",
+   "fieldtype": "Data",
+   "label": "Medium"
+  },
+  {
+   "fieldname": "first_campaign",
+   "fieldtype": "Data",
+   "label": "Campaign (utm)"
+  },
+  {
+   "fieldname": "cb_first",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "first_content",
+   "fieldtype": "Data",
+   "label": "Content"
+  },
+  {
+   "fieldname": "first_term",
+   "fieldtype": "Data",
+   "label": "Term"
+  },
+  {
+   "fieldname": "first_landing",
+   "fieldtype": "Data",
+   "label": "Landing Page"
+  },
+  {
+   "fieldname": "first_at",
+   "fieldtype": "Datetime",
+   "label": "Time"
+  },
+  {
+   "fieldname": "section_last",
+   "fieldtype": "Section Break",
+   "label": "Last Touch"
+  },
+  {
+   "fieldname": "last_campaign_link",
+   "fieldtype": "Link",
+   "label": "Last Touch Campaign",
+   "options": "Marketing Campaign",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "last_source",
+   "fieldtype": "Data",
+   "label": "Source",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "last_medium",
+   "fieldtype": "Data",
+   "label": "Medium"
+  },
+  {
+   "fieldname": "last_campaign",
+   "fieldtype": "Data",
+   "label": "Campaign (utm)"
+  },
+  {
+   "fieldname": "cb_last",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_content",
+   "fieldtype": "Data",
+   "label": "Content"
+  },
+  {
+   "fieldname": "last_term",
+   "fieldtype": "Data",
+   "label": "Term"
+  },
+  {
+   "fieldname": "last_landing",
+   "fieldtype": "Data",
+   "label": "Landing Page"
+  },
+  {
+   "fieldname": "last_at",
+   "fieldtype": "Datetime",
+   "label": "Time"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Marketing Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Marketing User",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "description": "Where a lead came from: the first and last touch (UTM values, landing page, time), click IDs and the matching campaigns.",
+ "in_create": 1
+}

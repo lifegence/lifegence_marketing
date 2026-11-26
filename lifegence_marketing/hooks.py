@@ -8,7 +8,7 @@ app_license = "apache-2.0"
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -279,3 +279,44 @@ app_license = "apache-2.0"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+app_logo_url = "/assets/lifegence_marketing/images/logo.svg"
+app_home = "/desk/marketing"
+
+add_to_apps_screen = [
+	{
+		"name": app_name,
+		"logo": app_logo_url,
+		"title": app_title,
+		"route": app_home,
+		"has_permission": "frappe.permissions.check_app_permission",
+	}
+]
+
+after_install = "lifegence_marketing.setup.after_install"
+after_migrate = "lifegence_marketing.setup.after_migrate"
+after_app_install = "lifegence_marketing.setup.after_app_install"
+
+website_route_rules = [{"from_route": "/m/<code>", "to_route": "m"}]
+
+after_request = ["lifegence_marketing.attribution.after_request"]
+
+doc_events = {
+	"Lead": {
+		"before_insert": "lifegence_marketing.attribution.before_insert_lead",
+		"after_insert": "lifegence_marketing.attribution.after_insert_lead",
+	},
+	"CRM Lead": {
+		"before_insert": "lifegence_marketing.attribution.before_insert_lead",
+		"after_insert": "lifegence_marketing.attribution.after_insert_lead",
+	},
+	"CRM Deal": {"before_insert": "lifegence_marketing.attribution.before_insert_deal"},
+	"Ringi": {
+		"on_update": "lifegence_marketing.marketing.doctype.marketing_campaign.marketing_campaign.on_ringi_update"
+	},
+}
+
+scheduler_events = {
+	"daily": ["lifegence_marketing.connectors.sync.daily"],
+	"hourly": ["lifegence_marketing.connectors.sync.retry_failed"],
+}

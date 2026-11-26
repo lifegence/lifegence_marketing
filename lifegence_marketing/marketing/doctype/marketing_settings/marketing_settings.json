@@ -1,0 +1,137 @@
+{
+ "doctype": "DocType",
+ "name": "Marketing Settings",
+ "module": "Marketing",
+ "engine": "InnoDB",
+ "creation": "2026-11-26 12:00:00.000000",
+ "modified": "2026-11-26 12:00:00.000000",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "field_order": [
+  "section_attribution",
+  "attribution_days",
+  "default_model",
+  "click_id_params",
+  "column_break_consent",
+  "cookie_consent_required",
+  "consent_cookie_name",
+  "section_sync",
+  "refresh_days",
+  "backfill_days",
+  "campaign_prefix_separator",
+  "section_approval",
+  "require_ringi"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_attribution",
+   "fieldtype": "Section Break",
+   "label": "Attribution"
+  },
+  {
+   "fieldname": "attribution_days",
+   "fieldtype": "Int",
+   "label": "Attribution Days",
+   "default": "90",
+   "description": "How long the first and last touch of a visitor are kept in the lm_attr cookie"
+  },
+  {
+   "fieldname": "default_model",
+   "fieldtype": "Select",
+   "label": "Default Attribution",
+   "options": "Last Touch\nFirst Touch",
+   "default": "Last Touch"
+  },
+  {
+   "fieldname": "click_id_params",
+   "fieldtype": "Small Text",
+   "label": "Click ID Parameters",
+   "default": "gclid\ngbraid\nwbraid\nfbclid\nmsclkid\nttclid\nli_fat_id",
+   "description": "URL parameters recorded as click IDs, one per line"
+  },
+  {
+   "fieldname": "column_break_consent",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cookie_consent_required",
+   "fieldtype": "Check",
+   "label": "Record Only With Consent",
+   "description": "Record a visitor's source only when the consent cookie below is present"
+  },
+  {
+   "fieldname": "consent_cookie_name",
+   "fieldtype": "Data",
+   "label": "Consent Cookie Name",
+   "depends_on": "cookie_consent_required"
+  },
+  {
+   "fieldname": "section_sync",
+   "fieldtype": "Section Break",
+   "label": "Ad Performance Import"
+  },
+  {
+   "fieldname": "refresh_days",
+   "fieldtype": "Int",
+   "label": "Days Fetched Again",
+   "default": "7",
+   "description": "Media revise recent figures (late conversions): the last N days are fetched again on every import"
+  },
+  {
+   "fieldname": "backfill_days",
+   "fieldtype": "Int",
+   "label": "Days Fetched on First Import",
+   "default": "90"
+  },
+  {
+   "fieldname": "campaign_prefix_separator",
+   "fieldtype": "Data",
+   "label": "Campaign Prefix Separator",
+   "default": "_",
+   "description": "A media campaign whose name starts with a campaign's slug followed by this separator is matched to that campaign"
+  },
+  {
+   "fieldname": "section_approval",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "fieldname": "require_ringi",
+   "fieldtype": "Check",
+   "label": "Require a Ringi to Activate",
+   "description": "Needs japan_workplace. A campaign becomes Active only with a decided ringi that references it"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Marketing Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "issingle": 1,
+ "description": "Settings of Lifegence Marketing: attribution, ad performance import and approval."
+}

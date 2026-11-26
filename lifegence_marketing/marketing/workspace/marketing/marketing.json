@@ -1,0 +1,316 @@
+{
+ "app": "lifegence_marketing",
+ "charts": [],
+ "content": "[{\"id\":\"lmhead001\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Marketing</b></span>\",\"col\":12}},{\"id\":\"lmshort004\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Campaign Performance\",\"col\":3}},{\"id\":\"lmshort000\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Marketing Campaign\",\"col\":3}},{\"id\":\"lmshort001\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Marketing Tracking Link\",\"col\":3}},{\"id\":\"lmshort002\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Marketing Ad Account\",\"col\":3}},{\"id\":\"lmshort003\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Marketing Import\",\"col\":3}},{\"id\":\"lmspace001\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"lmcard005\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"lmcard000\",\"type\":\"card\",\"data\":{\"card_name\":\"Campaigns\",\"col\":4}},{\"id\":\"lmcard001\",\"type\":\"card\",\"data\":{\"card_name\":\"Channels and Accounts\",\"col\":4}},{\"id\":\"lmcard002\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"lmcard003\",\"type\":\"card\",\"data\":{\"card_name\":\"Ad Performance\",\"col\":4}},{\"id\":\"lmcard004\",\"type\":\"card\",\"data\":{\"card_name\":\"Leads\",\"col\":4}}]",
+ "creation": "2026-11-26 12:00:00",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "bar-chart",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Marketing",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Campaign Performance",
+   "link_count": 0,
+   "link_to": "Campaign Performance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Budget vs Actual",
+   "link_count": 0,
+   "link_to": "Budget vs Actual",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Channel Summary",
+   "link_count": 0,
+   "link_to": "Channel Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Ad Spend Reconciliation",
+   "link_count": 0,
+   "link_to": "Ad Spend Reconciliation",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Campaigns",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Campaign",
+   "link_count": 0,
+   "link_to": "Marketing Campaign",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Creative",
+   "link_count": 0,
+   "link_to": "Marketing Creative",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Tracking Link",
+   "link_count": 0,
+   "link_to": "Marketing Tracking Link",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ad Performance",
+   "link_count": 5,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Import",
+   "link_count": 0,
+   "link_to": "Marketing Import",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Performance",
+   "link_count": 0,
+   "link_to": "Marketing Performance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Ad Object",
+   "link_count": 0,
+   "link_to": "Marketing Ad Object",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Import Profile",
+   "link_count": 0,
+   "link_to": "Marketing Import Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Sync Log",
+   "link_count": 0,
+   "link_to": "Marketing Sync Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Leads",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Attribution",
+   "link_count": 0,
+   "link_to": "Marketing Attribution",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Lead Form Map",
+   "link_count": 0,
+   "link_to": "Marketing Lead Form Map",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Channels and Accounts",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Channel",
+   "link_count": 0,
+   "link_to": "Marketing Channel",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Ad Account",
+   "link_count": 0,
+   "link_to": "Marketing Ad Account",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing Settings",
+   "link_count": 0,
+   "link_to": "Marketing Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "UTM Campaign",
+   "link_count": 0,
+   "link_to": "UTM Campaign",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "UTM Source",
+   "link_count": 0,
+   "link_to": "UTM Source",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "UTM Medium",
+   "link_count": 0,
+   "link_to": "UTM Medium",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-11-26 16:00:00",
+ "modified_by": "Administrator",
+ "module": "Marketing",
+ "name": "Marketing",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 42.0,
+ "shortcuts": [
+  {
+   "label": "Campaign Performance",
+   "link_to": "Campaign Performance",
+   "type": "Report",
+   "color": "Grey"
+  },
+  {
+   "label": "Marketing Campaign",
+   "link_to": "Marketing Campaign",
+   "type": "DocType",
+   "doc_view": "List",
+   "color": "Grey"
+  },
+  {
+   "label": "Marketing Tracking Link",
+   "link_to": "Marketing Tracking Link",
+   "type": "DocType",
+   "doc_view": "List",
+   "color": "Grey"
+  },
+  {
+   "label": "Marketing Ad Account",
+   "link_to": "Marketing Ad Account",
+   "type": "DocType",
+   "doc_view": "List",
+   "color": "Grey"
+  },
+  {
+   "label": "Marketing Import",
+   "link_to": "Marketing Import",
+   "type": "DocType",
+   "doc_view": "List",
+   "color": "Grey"
+  }
+ ],
+ "standard": 1,
+ "title": "Marketing",
+ "type": "Workspace"
+}

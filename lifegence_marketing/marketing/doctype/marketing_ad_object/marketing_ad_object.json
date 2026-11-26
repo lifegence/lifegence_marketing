@@ -1,0 +1,143 @@
+{
+ "doctype": "DocType",
+ "name": "Marketing Ad Object",
+ "module": "Marketing",
+ "engine": "InnoDB",
+ "creation": "2026-11-26 12:00:00.000000",
+ "modified": "2026-11-26 12:00:00.000000",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "field_order": [
+  "object_name",
+  "object_type",
+  "parent_object",
+  "status",
+  "cb1",
+  "ad_account",
+  "channel",
+  "external_id",
+  "section_map",
+  "marketing_campaign",
+  "mapped_manually",
+  "landing_url"
+ ],
+ "fields": [
+  {
+   "fieldname": "object_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "object_type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Campaign\nAd Group\nAd",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "parent_object",
+   "fieldtype": "Link",
+   "label": "Parent",
+   "options": "Marketing Ad Object"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status on the Channel"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ad_account",
+   "fieldtype": "Link",
+   "label": "Ad Account",
+   "options": "Marketing Ad Account",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Link",
+   "label": "Channel",
+   "options": "Marketing Channel",
+   "fetch_from": "ad_account.channel",
+   "read_only": 1
+  },
+  {
+   "fieldname": "external_id",
+   "fieldtype": "Data",
+   "label": "ID on the Channel",
+   "reqd": 1,
+   "description": "The channel's ID, or name: followed by the name when the export has no ID"
+  },
+  {
+   "fieldname": "section_map",
+   "fieldtype": "Section Break",
+   "label": "Campaign"
+  },
+  {
+   "fieldname": "marketing_campaign",
+   "fieldtype": "Link",
+   "label": "Marketing Campaign",
+   "options": "Marketing Campaign",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Set automatically from the name (campaign code followed by the separator) or from the parent. Set it by hand to fix the match; it then applies to the objects below and their figures"
+  },
+  {
+   "fieldname": "mapped_manually",
+   "fieldtype": "Check",
+   "label": "Matched by Hand",
+   "read_only": 1
+  },
+  {
+   "fieldname": "landing_url",
+   "fieldtype": "Small Text",
+   "label": "Landing Page"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Marketing Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Marketing User",
+   "read": 1,
+   "write": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "autoname": "hash",
+ "title_field": "object_name",
+ "show_title_field_in_link": 1,
+ "search_fields": "object_name,object_type,ad_account",
+ "description": "A campaign, ad group or ad on an advertising channel, matched to a marketing campaign."
+}

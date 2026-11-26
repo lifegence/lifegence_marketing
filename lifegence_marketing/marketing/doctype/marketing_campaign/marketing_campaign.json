@@ -1,0 +1,207 @@
+{
+ "doctype": "DocType",
+ "name": "Marketing Campaign",
+ "module": "Marketing",
+ "engine": "InnoDB",
+ "creation": "2026-11-26 12:00:00.000000",
+ "modified": "2026-11-26 12:00:00.000000",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "field_order": [
+  "campaign_name",
+  "campaign_code",
+  "utm_campaign",
+  "objective",
+  "status",
+  "column_break_main",
+  "campaign_owner",
+  "from_date",
+  "to_date",
+  "currency",
+  "section_targets",
+  "target_leads",
+  "target_cpa",
+  "column_break_targets",
+  "target_roas",
+  "total_budget",
+  "section_budget",
+  "budgets",
+  "section_desc",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "campaign_name",
+   "fieldtype": "Data",
+   "label": "Campaign Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "campaign_code",
+   "fieldtype": "Data",
+   "label": "Campaign Code",
+   "reqd": 1,
+   "unique": 1,
+   "set_only_once": 1,
+   "in_list_view": 1,
+   "description": "Letters, digits and hyphens (for example 2026q1-expo). Used as utm_campaign in URLs and as the name of the UTM Campaign; cannot be changed later"
+  },
+  {
+   "fieldname": "utm_campaign",
+   "fieldtype": "Link",
+   "label": "UTM Campaign",
+   "options": "UTM Campaign",
+   "unique": 1,
+   "read_only": 1,
+   "description": "Created from the campaign code when saved. The same value as utm_campaign on leads, deals and orders"
+  },
+  {
+   "fieldname": "objective",
+   "fieldtype": "Select",
+   "label": "Objective",
+   "options": "Leads\nSales\nAwareness\nEvent\nRecruiting\nOther",
+   "default": "Leads",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planned\nPending Approval\nActive\nPaused\nCompleted\nCancelled",
+   "default": "Planned",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_main",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "campaign_owner",
+   "fieldtype": "Link",
+   "label": "Campaign Owner",
+   "options": "User",
+   "default": "__user"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_targets",
+   "fieldtype": "Section Break",
+   "label": "Targets"
+  },
+  {
+   "fieldname": "target_leads",
+   "fieldtype": "Int",
+   "label": "Target Leads"
+  },
+  {
+   "fieldname": "target_cpa",
+   "fieldtype": "Currency",
+   "label": "Target Cost per Lead",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_targets",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_roas",
+   "fieldtype": "Float",
+   "label": "Target ROAS",
+   "description": "Revenue divided by ad cost (for example 3.0)"
+  },
+  {
+   "fieldname": "total_budget",
+   "fieldtype": "Currency",
+   "label": "Total Budget",
+   "options": "currency",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_budget",
+   "fieldtype": "Section Break",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "budgets",
+   "fieldtype": "Table",
+   "label": "Budget by Channel and Month",
+   "options": "Marketing Campaign Budget"
+  },
+  {
+   "fieldname": "section_desc",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Marketing Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Marketing User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "autoname": "field:campaign_code",
+ "search_fields": "campaign_name,campaign_code,status",
+ "title_field": "campaign_name",
+ "show_title_field_in_link": 1,
+ "description": "A marketing campaign: objective, period, budget by channel and month, and targets. Its UTM campaign ties leads, deals, orders and ad performance together."
+}
