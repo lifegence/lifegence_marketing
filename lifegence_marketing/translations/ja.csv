@@ -81,7 +81,7 @@ Tracking URL,計測用 URL
 Short URL,短縮 URL
 QR Code,QR コード
 Links,リンク
-The campaign code may contain only lowercase letters, digits and hyphens (2 to 63 characters),キャンペーンコードには英小文字・数字・ハイフンだけが使えます（2〜63 文字）
+"The campaign code may contain only lowercase letters, digits and hyphens (2 to 63 characters)",キャンペーンコードには英小文字・数字・ハイフンだけが使えます（2〜63 文字）
 To Date must not be before From Date,終了日は開始日より前にできません
 Row {0}: {1} in {2} is listed more than once,{0} 行目：{2} の {1} が重複しています
 Row {0}: the budget cannot be negative,{0} 行目：予算はマイナスにできません
@@ -201,3 +201,51 @@ The ad account is not connected (set a Connected App),広告アカウントが�
 No valid token of {0} for {1}; connect again,{0} の {1} の有効なトークンがありません。接続し直してください
 Ad account {0}: the connection has expired. Connect it again.,広告アカウント {0}：接続の期限が切れました。接続し直してください。
 Ad account {0}: the import failed.,広告アカウント {0}：取り込みに失敗しました。
+A media campaign whose name starts with a campaign's slug followed by this separator is matched to that campaign,媒体側のキャンペーン名が「キャンペーンコード＋この区切り」で始まると、そのキャンペーンに自動で対応付けます
+Ad Account,広告アカウント
+Any day of the month; saved as the first day,月内の任意の日付（月初の日付で保存します）
+"Auto tries UTF-8, then Shift_JIS (cp932)",自動：UTF-8、だめなら Shift_JIS（cp932）で読みます
+Auto,自動,Marketing Import Profile
+"Created from the campaign code when saved. The same value as utm_campaign on leads, deals and orders",保存時にキャンペーンコードから作ります。リード・商談・受注の utm_campaign と同じ値です
+Creative,クリエイティブ
+Default utm_source of tracking links for this channel,この媒体の計測リンクの既定の utm_source
+For channels authenticated by an API key (ChatGPT),API キーで認証する媒体（ChatGPT）用
+How long the first and last touch of a visitor are kept in the lm_attr cookie,来訪者の最初と最後の接点を Cookie（lm_attr）に覚えておく日数
+"Letters, digits and hyphens (for example 2026q1-expo). Used as utm_campaign in URLs and as the name of the UTM Campaign; cannot be changed later",英小文字・数字・ハイフン（例 2026q1-expo）。URL の utm_campaign と UTM キャンペーンの名前に使います。後から変更できません
+"Lines before the header (report title, period)",見出しの行より前にある行数（レポート名・期間など）
+Manual,手入力
+Media revise recent figures (late conversions): the last N days are fetched again on every import,媒体は直近の数字を後から修正します（遅れて付くコンバージョン）。取り込みのたびに直近 N 日を取り直します
+Meta lead form ID (Frappe CRM facebook_form_id),Meta のリード獲得フォームの ID（Frappe CRM の facebook_form_id）
+Needs a connector for the channel,媒体のコネクタが必要です
+Needs japan_workplace. A campaign becomes Active only with a decided ringi that references it,japan_workplace が必要です。そのキャンペーンを関連文書にした決裁済みの稟議があるときだけ実施中にできます
+"OAuth connection (Meta, Google). The token is kept by Frappe's Token Cache",OAuth の接続（Meta・Google）。トークンは Frappe の Token Cache に保存されます
+OK,正常,Marketing Ad Account
+Only for columns that are not recognised automatically (common English and Japanese headers are),自動で見分けられない列だけ指定します（よくある英語・日本語の列名は自動で見分けます）
+"Python strptime format, for example %Y/%m/%d. Empty: common formats are tried",Python の strptime の形式（例 %Y/%m/%d）。空欄ならよくある形式を順に試します
+Record a visitor's source only when the consent cookie below is present,下の同意の Cookie があるときだけ、来訪者の流入元を記録します
+Revenue divided by ad cost (for example 3.0),売上÷広告費（例 3.0）
+Set automatically from the name (campaign code followed by the separator) or from the parent. Set it by hand to fix the match; it then applies to the objects below and their figures,名前（キャンペーンコード＋区切り）または上位から自動で決まります。手で直すと、下の広告と実績にも反映します
+Set when a connector app registers this channel (lifegence_marketing_connectors). Empty: CSV or manual entry,コネクタのアプリ（lifegence_marketing_connectors）がこの媒体を登録すると設定されます。空欄は CSV か手入力
+The account ID on the channel (unique per channel),媒体でのアカウント ID（媒体ごとに一意）
+"The channel's ID, or name: followed by the name when the export has no ID",媒体での ID。CSV に ID が無いときは name: に続けて名前
+The creative states that it is an advertisement (PR). Required for posts by influencers and affiliates under the stealth marketing rule,広告であること（PR）を表示している。ステマ規制により、インフルエンサー・アフィリエイトの投稿にも必要です
+Time zone of the channel's reports (dates of the performance figures),媒体のレポートの時間帯（実績の日付の基準）
+"URL parameters recorded as click IDs, one per line",クリック ID として記録する URL のパラメーター（1 行に 1 つ）
+Whose connection (OAuth token) is used for the import. Connected App tokens belong to a user,取り込みに使う接続（OAuth のトークン）の持ち主。Connected App のトークンは利用者ごとです
+"facebook, instagram, ... (Meta). Empty for other channels",facebook・instagram など（Meta）。ほかの媒体は空欄
+"gclid, fbclid and others, as JSON",gclid・fbclid など（JSON）
+date,日付,Marketing Import Profile Column
+campaign_id,キャンペーン ID,Marketing Import Profile Column
+campaign_name,キャンペーン名,Marketing Import Profile Column
+ad_group_id,広告グループ ID,Marketing Import Profile Column
+ad_group_name,広告グループ名,Marketing Import Profile Column
+ad_id,広告 ID,Marketing Import Profile Column
+ad_name,広告名,Marketing Import Profile Column
+placement,配信面,Marketing Import Profile Column
+impressions,表示回数,Marketing Import Profile Column
+reach,リーチ,Marketing Import Profile Column
+clicks,クリック数,Marketing Import Profile Column
+cost,費用,Marketing Import Profile Column
+conversions,コンバージョン,Marketing Import Profile Column
+conversion_value,コンバージョンの金額,Marketing Import Profile Column
+currency,通貨,Marketing Import Profile Column
