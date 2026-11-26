@@ -56,7 +56,8 @@ def sync_account(name, date_from=None, date_to=None):
 			"started_on": now_datetime(),
 		}
 	).insert(ignore_permissions=True)
-	frappe.db.commit()
+	# The "Running" log must survive the rollback below when the import fails
+	frappe.db.commit()  # nosemgrep
 	status, rows, leads, error = "OK", 0, 0, None
 	try:
 		connector = connector_for(account)
@@ -91,7 +92,6 @@ def sync_account(name, date_from=None, date_to=None):
 	frappe.db.set_value("Marketing Ad Account", name, values, update_modified=False)
 	if status != "OK":
 		notify_failure(account, status, error)
-	frappe.db.commit()
 	return log.name
 
 
@@ -213,7 +213,7 @@ def retry_failed():
 			frappe.enqueue(sync_account, queue="long", name=a, job_id=f"lm-sync-{a}", deduplicate=True)
 
 
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def sync_now(name: str, date_from: str | None = None, date_to: str | None = None):
 	frappe.get_doc("Marketing Ad Account", name).check_permission("write")
 	frappe.enqueue(
@@ -227,7 +227,7 @@ def sync_now(name: str, date_from: str | None = None, date_to: str | None = None
 	)
 
 
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def test_connection(name: str):
 	account = frappe.get_doc("Marketing Ad Account", name)
 	account.check_permission("write")

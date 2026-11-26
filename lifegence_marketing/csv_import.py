@@ -169,5 +169,5 @@ def read(content, encoding="Auto", skip_rows=0, date_format=None, profile_column
 				row[t] = number(get(t))
 			rows.append(row)
 		except ValueError as e:
-			messages.append(_("Line {0}: {1}").format(line_no, e))
+			messages.append(_("Line {0}: {1}").format(line_no, str(e)))
 	return rows, messages

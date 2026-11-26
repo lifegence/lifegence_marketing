@@ -110,7 +110,8 @@ def cleanup():
 			frappe.delete_doc(a.reference_doctype, a.reference_name, force=True, ignore_permissions=True)
 		frappe.db.delete("Marketing Attribution", a.name)
 	frappe.db.delete("Marketing Lead Form Map", {"form_id": "lm-sync-form"})
-	frappe.db.commit()
+	# test fixtures shared across tests (and by code that commits)
+	frappe.db.commit()  # nosemgrep
 
 
 class TestConnectorFramework(IntegrationTestCase):
@@ -129,7 +130,8 @@ class TestConnectorFramework(IntegrationTestCase):
 			).insert(ignore_permissions=True)
 		frappe.get_doc("User", MANAGER).add_roles("Marketing Manager")
 		cls.campaign = make_campaign()
-		frappe.db.commit()
+		# test fixtures shared across tests (and by code that commits)
+		frappe.db.commit()  # nosemgrep
 
 	@classmethod
 	def tearDownClass(cls):
@@ -153,7 +155,8 @@ class TestConnectorFramework(IntegrationTestCase):
 				"api_key": "secret-key",
 			}
 		).insert()
-		frappe.db.commit()
+		# test fixtures shared across tests (and by code that commits)
+		frappe.db.commit()  # nosemgrep
 		self.patcher = patch("lifegence_marketing.connectors.registry", return_value={"fake": PATH})
 		self.patcher.start()
 
@@ -244,7 +247,8 @@ class TestConnectorFramework(IntegrationTestCase):
 				"marketing_campaign": self.campaign.name,
 			}
 		).insert()
-		frappe.db.commit()
+		# test fixtures shared across tests (and by code that commits)
+		frappe.db.commit()  # nosemgrep
 		log = frappe.get_doc("Marketing Sync Log", sync_account(self.account.name))
 		self.assertEqual(log.leads, 2)
 		a1 = frappe.get_doc("Marketing Attribution", {"external_lead_id": "lead-1"})

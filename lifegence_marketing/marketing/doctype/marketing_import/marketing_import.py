@@ -38,7 +38,7 @@ class MarketingImport(Document):
 		)
 
 
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def start(name: str):
 	doc = frappe.get_doc("Marketing Import", name)
 	doc.check_permission("write")

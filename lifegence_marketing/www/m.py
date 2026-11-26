@@ -14,6 +14,7 @@ def get_context(context):
 	url = resolve(frappe.form_dict.get("code") or "")
 	if not url:
 		raise frappe.PageDoesNotExistError
-	frappe.db.commit()  # the click count; the redirect below ends the request
+	# Frappe rolls back GET requests; the click count must be kept
+	frappe.db.commit()  # nosemgrep
 	frappe.local.flags.redirect_location = url
 	raise frappe.Redirect(302)  # not 301: a cached permanent redirect would skip the click count

@@ -102,7 +102,8 @@ class TestAttributionOnLeads(IntegrationTestCase):
 	def setUpClass(cls):
 		super().setUpClass()
 		cls.campaign = make_campaign()  # UTM Campaign lm-test-expo
-		frappe.db.commit()
+		# test fixtures shared across tests (and by code that commits)
+		frappe.db.commit()  # nosemgrep
 
 	def tearDown(self):
 		frappe.local.request = None
