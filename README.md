@@ -58,6 +58,10 @@ bench --site <test site> set-config allow_tests true
 bench --site <test site> run-tests --app lifegence_marketing
 ```
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
+
 ## License
 
 Apache-2.0. See [license.txt](license.txt).

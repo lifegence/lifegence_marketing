@@ -10,7 +10,11 @@ frappe.ui.form.on("Marketing Campaign", {
 			return;
 		}
 		if (["Planned", "Pending Approval"].includes(frm.doc.status)) {
-			frm.dashboard.add_comment(__("A decided ringi is needed before this campaign becomes Active."), "orange", true);
+			frm.dashboard.add_comment(
+				__("A decided ringi is needed before this campaign becomes Active."),
+				"orange",
+				true
+			);
 			frm.add_custom_button(__("Create Ringi"), () =>
 				frappe.new_doc("Ringi", {
 					title: frm.doc.campaign_name,
